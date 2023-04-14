@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Selectors - Cinema</title>
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+            font-family: Arial;
+            width: 700px;
+            text-align: center;
+        }
+        .cinema {
+            border: 1px dotted red;
+            padding: 10px;
+            text-align: center;
+        }
+        .cinema .main span {
+            background-image: url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Magenta-Seat-icon.png);
+            width: 72px;
+            height: 72px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .cinema .main .row-left {
+            float: left;
+            width: 50%;
+        }
+        .cinema .main .row-right {
+            float: right;
+            width: 50%;
+        }
+        .cinema .front span {
+            background-image: url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Magenta-Seat-icon.png);
+            width: 72px;
+            height: 72px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .cinema .vip span {
+            background-image: url(https://icons.iconarchive.com/icons/archigraphs/modern-chairs/72/Orange-Seat-icon.png);
+            width: 72px;
+            height: 72px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .chair {
+            position: relative;
+        }
+        .chair:hover::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url(https://icons.iconarchive.com/icons/majdi-khawaja/ice-age-4/128/Sid-3-icon.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 20px;
+            left: 12px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Advanced Selectors <br> Cinema</h1>
+
+    <div class="cinema">
+        <div class="vip">
+            <h2>VIP</h2>
+            <div class="row">
+                <span class="chair">1</span><span class="chair">2</span><span class="chair">3</span><span class="chair">4</span><span class="chair">5</span><span class="chair">6</span><span class="chair">7</span>
+            </div>  
+        </div>
+        <div class="main">
+            <h2>Main</h2>
+            <div class="row-left"><span class="chair">1</span><span class="chair">2</span><span class="chair">3</span><span class="chair">4</span></div>
+            <div class="row-left"><span class="chair">5</span><span class="chair">6</span><span class="chair">7</span><span class="chair">8</span></div>
+            <div class="row-left"><span class="chair">1</span><span class="chair">2</span><span class="chair">3</span><span class="chair">4</span></div>
+            <div class="row-right"><span class="chair">5</span><span class="chair">6</span><span class="chair">7</span><span class="chair">8</span></div>
+            <div class="row-right"><span class="chair">5</span><span class="chair">6</span><span class="chair">7</span><span class="chair">8</span></div>
+            <div class="row-right"><span class="chair">1</span><span class="chair">2</span><span class="chair">3</span><span class="chair">4</span></div>
+        <div class="front">
+            <h2>Front</h2>
+            <div class="row"><span class="chair">1</span><span class="chair">2</span><span class="chair">3</span><span class="chair">4</span><span class="chair">5</span></div>
+        </div>
+    </div>
+</body>
+</html>
